@@ -29,6 +29,20 @@
     }
   }
 
-  
+  class OperationClass{
+    private $strategy;
+
+    public function __construct(Operation $startegy){
+      $this->strategy = $startegy;
+    }
+
+    public function setStrategy(Operation $startegy){
+      $this->strategy = $startegy;
+    }
+
+    public function do($number1, $number2){
+      return $strategy->doOperation($number1, $number2);
+    }
+  }
 
 ?>
