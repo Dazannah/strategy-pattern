@@ -44,5 +44,20 @@
       return $this->strategy->doOperation($number1, $number2);
     }
   }
-  
+
+  $test = new OperationClass(new Addition());
+  $result = $test->do(2,3);
+  echo $result . "<br>";
+
+  $test->setStrategy(new Subtraction());
+  $result = $test->do(2,3);
+  echo $result . "<br>";
+
+  $test->setStrategy(new Multiplication());
+  $result = $test->do(2,3);
+  echo $result . "<br>";
+
+  $test->setStrategy(new Division());
+  $result = $test->do(2,3);
+  echo $result . "<br>";
 ?>
